@@ -1,0 +1,642 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+#define S         524
+#define Z         800
+
+int main ()
+
+{
+int op;
+int sv;
+int in;
+double PA;
+double FC;
+double FR;
+double Tem;
+
+	do {
+//Menu principal
+	system ("cls");	
+	printf ("\n\t\t\t Bienvenido a mi programa :)\n\nEste programa fue hecho por Alvarado Hernandez Erick\nen lenguaje C\n\n\n");
+	printf ("\t Selecione la persona a la que se revisaran los signos vitales\n\n");
+	printf("1) Infante\n");
+	printf("2) Adulto\n");
+	printf("3) Adulto mayor\n");
+	printf("4) Instructivo\n");
+	printf("5) Salir\n");
+	scanf ("%d", &op);
+	
+		switch(op) {
+	// Menu de infante
+		case 1:
+		do {
+			system ("cls");	
+			printf("\tInfante\n\n");
+			printf("Elegir la opción deseada\n");
+			printf("1) Presion arterial\n");
+			printf("2) Frecuencia cardiaca\n");
+			printf("3) Frecuencia respiratoria\n");
+			printf("4) Temperatura\n");
+			printf("5) Menu anterior\n");
+			scanf("%d",&sv);		
+
+			switch(sv) {
+		
+			case 1:
+			system ("cls");	
+			printf("\tSelecciono presion arterial\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &PA);
+				
+				if (PA>=160){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (PA<=60 && PA!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+
+				if (PA>110 && PA<160){
+				printf ("\t\tHipertension\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (PA<90 && PA>60){
+				printf ("\t\tHipotension\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (PA==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (PA!=-1);
+			Sleep (1000);
+		       system ("cls");	
+			break;
+ 
+
+			case 2:
+			system ("cls");	
+			printf("\tSelecciono frecuencia cardiacan\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FC);
+
+				if (FC>=130){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FC<=40 && FC!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FC>90 && FC<130){
+				printf ("\t\tTaquicardia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FC<60 && FC>40){
+				printf ("\t\tBradicardia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FC==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FC!=-1);
+			Sleep (1000);
+		        system ("cls");		
+			break;
+			
+
+			case 3:
+			system ("cls");	
+			printf("\tSelecciono frecuencia respiratoria\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FR);
+
+				if (FR>=30){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FR<=10 && FR!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FR>20 && FR<30){
+				printf ("\t\tPolipnea\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FR<16 && FR>10){
+				printf ("\t\tApnea\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FR==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FR!=-1); 
+			Sleep (1000);
+			 system ("cls");	
+			break;
+
+		
+			case 4:
+			system ("cls");	
+			printf("\tSelecciono temperatura\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &Tem);
+
+				if (Tem>=41){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (Tem<=35 && Tem!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (Tem>37.5 && Tem<41){
+				printf ("\t\tHipertermia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (Tem<36 && Tem>35){
+				printf ("\t\tHipotermia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (Tem==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (Tem!=-1); 
+			Sleep (1000);
+			 system ("cls");	
+			break;
+			
+	//Regresar al menu anterior
+
+			case 5:
+			printf ("\tRegresando al menu anterior\n");
+			break;
+
+	//Opcion invalida de infante
+
+			default:
+			printf ("\tOpcion invalida, intente de nuevo\n");
+			Sleep (1000);
+			system ("cls");	
+			break;
+			
+			}
+			
+			}while (sv!=5);
+			Sleep (1000);
+			 system ("cls");	
+			 break;
+
+
+	//Menu de adulto
+		case 2:
+		do {	
+			system ("cls");	
+			printf("\tAdulto\n\n");
+			printf("Elegir la opción deseada\n");
+			printf("1) Presion arterial\n");
+			printf("2) Frecuencia cardiaca\n");
+			printf("3) Frecuencia respiratoria\n");
+			printf("4) Temperatura\n");
+			printf("5) Menu anterior\n");
+			scanf("%d",&sv);		
+
+			switch(sv) {
+		
+			case 1:
+			system ("cls");	
+			printf("\tSelecciono presion arterial\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &PA);
+
+				if (PA>=160){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (PA<=40 && PA!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (PA>120 && PA<160){
+				printf ("\t\tHipertension\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (PA<60 && PA>40){
+				printf ("\t\tHipotension\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (PA==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (PA!=-1);
+			Sleep (1000);
+			system ("cls");			
+			break;
+ 
+
+			case 2:
+			system ("cls");	
+			printf("\tSelecciono frecuencia cardiacan\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FC);
+
+				if (FC>=130){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FC<=40 && FC!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FC>90 && FC<130){
+				printf ("\t\tTaquicardia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FC<60 && FC>40){
+				printf ("\t\tBradicardia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FC==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FC!=-1); 
+			Sleep (1000);	
+		       	system ("cls");	
+			break;
+			
+
+			case 3:
+			system ("cls");	
+			printf("\tSelecciono frecuencia respiratoria\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FR);
+
+				if (FR>=30){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FR<=10 && FR!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FR>24 && FR<30){
+				printf ("\t\tPolipnea\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FR<16 && FR>10){
+				printf ("\t\tApnea\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FR==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FR!=-1); 
+			Sleep (1000);
+			system ("cls");	
+			break;
+
+		
+			case 4:
+			system ("cls");	
+			printf("\tSelecciono temperatura\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &Tem);
+
+				if (Tem>=41){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (Tem<=35 && Tem!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (Tem>37.8 && Tem<41){
+				printf ("\t\tHipertermia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (Tem<35.5 && Tem>35){
+				printf ("\t\tHipotermia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (Tem==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (Tem!=-1); 
+			Sleep (1000);
+			system ("cls");	
+			break;
+			
+	//Regresar al menu anterior
+			case 5:
+			printf ("\tRegresando al menu anterior\n");
+			break;
+
+	// Opcion invalida de adulto
+
+			default:
+			printf ("\tOpcion invalida, intente de nuevo\n");
+			Sleep (1000);
+		       	system ("cls");	
+			break;
+			
+			}
+			
+			}while (sv!=5);
+			Sleep (1000);
+	       		system ("cls");	
+			 break;
+
+
+	// Menu de adulto mayor
+
+		case 3:
+		do {
+			system ("cls");	
+			printf("\tAdulto mayor\n\n");
+			printf("Elegir la opción deseada\n");
+			printf("1) Presion arterial\n");
+			printf("2) Frecuencia cardiaca\n");
+			printf("3) Frecuencia respiratoria\n");
+			printf("4) Temperatura\n");
+			printf("5) Menu anterior\n");
+			scanf("%d",&sv);		
+
+			switch(sv) {
+		
+			case 1:
+			system ("cls");	
+			printf("\tSelecciono presion arterial\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &PA);
+
+				if (PA>=160){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (PA<=40 && PA!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (PA>140 && PA<160){
+				printf ("\t\tHipertension\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (PA<60 && PA>40){
+				printf ("\t\tHipotension\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (PA==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (PA!=-1);
+		       	Sleep (1000);
+			 system ("cls");	
+			break;
+ 
+
+			case 2:
+			system ("cls");	
+			printf("\tSelecciono frecuencia cardiaca\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FC);
+
+				if (FC>=100){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FC<=40 && FC!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FC>100 && FC<130){
+				printf ("\t\tTaquicardia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FC<60 && FC>40){
+				printf ("\t\tBradicardia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FC==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FC!=-1); 
+			Sleep (1000);
+			system ("cls");	
+			break;
+			
+
+			case 3:
+			system ("cls");	
+			printf("\tSelecciono frecuencia respiratoria\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &FR);
+
+				if (FR>=30){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (FR<=10 && FR!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (FR>24 && FR<30){
+				printf ("\t\tPolipnea\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (FR<15 && FR>10){
+				printf ("\t\tApnea\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (FR==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (FR!=-1); 
+			Sleep (1000);
+			 system ("cls");	
+			break;
+
+	
+			case 4:
+			system ("cls");	
+			printf("\tSelecciono temperatura\n");
+			printf ("Ingrese la informacion:\n");
+			do {
+				scanf ("%lf", &Tem);
+
+				if (Tem>=41){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+
+				if (Tem<=35 && Tem!=-1){ 
+				printf ("\t\tERROR\n\n");
+				Beep (Z, 2000);
+				}
+					
+				if (Tem>37.5 && Tem<41){
+				printf ("\t\tHipertermia\n\n");
+				Beep (S, 2000);
+				}
+			
+			      	if (Tem<35.5 && Tem>35){
+				printf ("\t\tHipotermia\n\n");
+				Beep (S, 2000);
+				}
+		
+				if (Tem==-1){
+				printf ("\t\tRegresando\n\n");
+				}
+			
+		
+			}while (Tem!=-1);
+		       	Sleep (1000);	
+			 system ("cls");	
+			break;
+			
+	//Regresar al menu principal
+			case 5:
+			printf ("\tRegresando al menu anterior\n");
+			break;
+
+
+	//Opcion invalida del menu de adulto mayor
+			default:
+			printf ("\tOpcion invalida, intente de nuevo\n");
+			Sleep (1000);
+			 system ("cls");	
+			break;
+			
+			}
+			
+			}while (sv!=5);
+			Sleep (1000);
+			 system ("cls");	
+			 break;
+
+
+//Instructivo
+		case 4:
+	 	system ("cls");
+		
+		do {
+		
+		printf("\t\tInstructivo\n\n");
+		printf("Programa realizado por Alvarado Hernandez Erick en lenguaje c.\n\n");
+		printf("Si no aparece el instructivo, puede que este no exista o presente algun\notro problema\n\n");
+		char contenido [500];
+		FILE *arch;
+		arch=fopen("archivo.txt","r");
+		
+		while(fscanf(arch," %[^\n]",&contenido)!=EOF)
+		printf("\t%s\n\n\n",contenido);
+		
+		fclose(arch);
+		
+		printf ("\n\n-1 para salir\n");
+
+		
+		scanf ("%d", &in);
+
+		
+		}while (in!=-1);
+		system ("cls");
+		break;
+		
+
+//Salida del menu principal
+		case 5:
+		printf("\n\tGracias por usar este programa :)\n");
+		break;
+
+//Opcion invalida del menu principal
+		default:
+		printf("Opcion invalida, intente de nuevo\n");
+		Sleep (1000);
+		 system ("cls");	
+		break;
+		}
+
+	}while(op!=5);
+	Sleep (1000);
+	 system ("cls");	
+	return 0;
+}
+					

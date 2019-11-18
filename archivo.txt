@@ -1,0 +1,32 @@
+
+
+. Este programa tiene por obejtivo leer los signos vitales de una 
+. persona y en caso de encontrar una anormalida, mandara una alarma,
+. o si se sale del rango mostrara ERROR.
+. 
+. Consta de un menu principal, en donde elegira un grupo de edad:
+.       1) Infante
+.       2) Adulto
+.       3) Adulto mayor
+.       4) Instructivo
+.       5) Cerrar programa	
+.
+.      En el menu secundario elegira el signo vital que desea leer:
+.	1) Presion arterial
+.	2) Frecuencia cardiaca
+.	3) Frecuencia respiratoria
+.	4) Temperatura
+.	5) Menu anterior
+.
+. Una vez que eligio un signo vital, debera mandar la informacion
+. y el programa mandara una alerta en caso de detectar una anomalidad,
+. si usted desea salir al menu secundario, debera introducir un -1
+.
+. Nota: para que el programa lea correctamente la informacion, los 
+.      datos deben ser numeros y las unidades deben ser:
+.              1) Presion arterial (milimetros de mercurio)
+.              2) Frecuencia cardiaca (latidos por minuto)
+.              3) Frecuencia respiratoria (respiraciones por minuto)
+.              4) Temperatura (grados centigrados)
+.
+.                     Gracias por su atencion
